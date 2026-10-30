@@ -1,46 +1,28 @@
-KARTOVNÍK 2.0 – VĚRNOSTNÍ KARTY
-=================================
+KARTOVNÍK 2.1 – RYCHLÁ VOLBA KARET
+================================
 
-CO JE NOVÉ
-- 31 předpřipravených obchodů s grafickými štítky v designu značky
-  (Tesco, Lidl, Kaufland, Albert, Billa, Penny, dm, Rossmann a další).
-- Výběr obchodu naplní jméno, kategorii a obrázek.
-- Vlastní fotografie / obrázek ke každé kartě (zmenší se před uložením).
-- Načítání čárového nebo QR kódu fotoaparátem.
-- Náhradní načtení kódu z fotografie.
-- Nově i kódy Code 39 a UPC-A; nadále Code 128, EAN-13, EAN-8, QR.
-- Export/import záloh zahrnuje i obrázky.
-- Staré karty z Kartovníku 1.0 zůstanou v prohlížeči zachovány.
+NOVÉ ROZLOŽENÍ
+- Karty: po spuštění jsou vidět jen karty ve velké dvousloupcové mřížce.
+  Klepnutím otevřeš čárový/QR kód pro pokladnu.
+- Správa karet: přidávání, úpravy, mazání, označení předních karet,
+  vyhledávání a (po rozbalení) záloha a obnovení.
+- Oblíbené karty označené hvězdou ve správě se zobrazují jako první.
 
-JAK NAHRÁT NA GITHUB
-1. Rozbal ZIP a nahraj všech 5 souborů do kořenové složky repozitáře:
-   index.html, manifest.webmanifest, sw.js, icon-192.png, icon-512.png.
-2. V GitHubu nastav Settings > Pages > Deploy from branch > main > /(root).
-3. Otevři adresu GitHub Pages na iPhonu přes Safari.
-4. Sdílet > Přidat na plochu. Ikona se zobrazí mezi aplikacemi.
+PŘECHOD Z PŘEDCHOZÍ VERZE
+Nahraj všech pět souborů z ZIP do stejného repozitáře jako předchozí
+Kartovník a nahraď staré soubory. Zachováš původní uložené karty, pokud
+se adresa GitHub Pages a prohlížeč nezmění. Pro jistotu si předem ulož
+zálohu původních karet.
 
-JAK NAČÍST KARTU KAMEROU
-1. Přidat > vybrat obchod > Skenovat fotoaparátem.
-2. Povol přístup ke kameře; namiř kód do výřezu.
-3. Pokud kamera nepůjde, použij Načíst kód z fotky nebo zadej číslo ručně.
-4. Po rozpoznání zkontroluj typ a číslo kódu, potom ulož.
+POUŽITÍ
+1. Nahraj index.html, manifest.webmanifest, sw.js, icon-192.png,
+   icon-512.png na GitHub Pages (HTTPS).
+2. Otevři aplikaci na iPhonu v Safari a přidej ji na plochu.
+3. Na kartě Karty je rychlá volba, vše ostatní ve Správě karet.
+4. Kamera vyžaduje HTTPS a přístup k fotoaparátu, knihovna html5-qrcode
+   2.3.8 se při prvním skenování stahuje z CDN; bez internetu může
+   skenování selhat. Číslo lze zadat ručně nebo zkusit fotku.
 
-DŮLEŽITÉ
-- Kamera funguje pouze přes HTTPS (např. GitHub Pages) nebo localhost,
-  nikoli při otevření souboru index.html z disku.
-- Pro skenování se při prvním spuštění načte knihovna html5-qrcode 2.3.8
-  ze sítě CDN. Bez připojení proto může být skenování nedostupné;
-  uložené karty a jejich čárové/QR kódy fungují offline.
-- Skenování na skutečném iPhonu nelze automatickým testem ověřit.
-  Webová knihovna uvádí podporu Safari pro iOS 15.1+.
-- Podporované snímané typy: QR, Code 128, EAN-13, EAN-8, UPC-A, Code 39.
-- Grafické štítky jsou místní stylizované reprezentace značek,
-  nejde o oficiální loga, aplikace ani partnerství s obchodníky.
-- Vlastní fotografie mohou rychle zaplnit úložiště Safari; pravidelně
-  si stáhni zálohu JSON. Data jsou pouze na konkrétním zařízení.
-- Při přenosu na nový telefon použij Nastavení > Záloha a obnovení.
-- Není potřeba žádný účet, server ani databáze.
-
-KNIHOVNA SKENOVÁNÍ
-html5-qrcode 2.3.8, Apache-2.0, https://github.com/mebjas/html5-qrcode
-Načítá se při prvním použití z jsDelivr CDN.
+DATA A BEZPEČNOST
+Karty jsou ukládány lokálně v prohlížeči; zálohy uchovávej odděleně.
+Obrázky obchodů jsou stylizované značky, nikoli oficiální loga.
