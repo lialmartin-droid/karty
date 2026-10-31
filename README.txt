@@ -1,15 +1,11 @@
-KARTOVNÍK 2.2 – VĚRNOSTNÍ KARTY
+KARTOVNÍK 2.3 – AUTOMATICKÁ LOGA OBCHODŮ
 
-Co je nové:
-- Hlavní obrazovka dle reference: dva sloupce barevných karet s logy, bez názvů pod kartami.
-- Titulek Věrnostní karty a vyhledávání.
-- Oblíbené jsou v části Často používané. Nastavují se hvězdičkou v záložce Správa karet.
-- Doplněny značky: Zvěrokruh, Dráčik, CineStar, Electro World, GECO, Knihy Dobrovský, ZooShop XXL.
-- Vzhled deseti dlaždic pochází z referenčního screenshotu dodaného uživatelem a je vložen přímo do HTML. U dalších obchodů se používá stylizované SVG. Pro vlastní vzhled lze nahrát obrázek.
-- Zachovány skener, QR/čárové kódy, správa, zálohování.
+NOVINKA: Při zadání názvu obchodu se logo automaticky dohledává přes veřejný katalog LogoAPI.sh. Pokud existuje více možností, lze je vybrat ručně. Známé řetězce mají připravené domény. Stažené logo se uloží s kartou jako PNG (funguje offline). Staré karty dostávají možnost automatického doplnění loga po spuštění aplikace.
 
-INSTALACE: Rozbalte ZIP a nahrajte jeho obsah přímo do kořene repozitáře GitHub Pages (index.html, icon-192.png, icon-512.png, manifest.webmanifest, sw.js). ZIP se nenahrává jako jediný soubor.
+Další funkce zůstávají: dvě záložky, velké barevné dlaždice, okamžité zobrazení čárových/QR kódů, skenování kamerou, vlastní obrázky, záloha/import.
 
-UPGRADE: Klíč místního úložiště kartovnik_cards_v1 zůstal zachován. Pokud použijete stejnou doménu/cestu a prohlížeč, uložené karty se načtou. Před změnou si proveďte export zálohy.
+OCHRANA SOUKROMÍ: Při dohledávání loga se službě LogoAPI.sh odešle pouze název obchodu. Neodesílá se číslo věrnostní karty. Stažené PNG se ukládá do místního úložiště prohlížeče. Online vyhledávání vyžaduje přístup k internetu a dostupnost externí služby. Výsledek může být neúplný, nedostupný nebo neodpovídat zamýšlenému obchodu, proto zůstává ruční nahrání obrázku a lokální stylizované značky.
 
-PWA: Safari -> Sdílet -> Přidat na plochu. Fotoaparát vyžaduje HTTPS a povolení uživatele; při prvním použití se načítá knihovna ze CDN.
+INSTALACE: Rozbalit ZIP, soubory index.html, sw.js, manifest.webmanifest, icon-192.png a icon-512.png vložit do kořene repozitáře GitHub Pages. Vlastní kartičky se uloží pod stejným klíčem jako starší verze: kartovnik_cards_v1. Před aktualizací doporučujeme vytvořit zálohu.
+
+Kamera vyžaduje HTTPS. Ikony obchodů jsou chráněnými ochrannými známkami jejich majitelů.
